@@ -1,1 +1,74 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Preprocessing</title>
+    <style>
+        body{
+            background-color: #5F9EA0;
+        }
+        h1{
+            background-color: #20B2AA;
+            border: 2px solid white;
+            padding: 12px 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        h3,p{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+        }
+        textarea {
+            width: 80%;
+            height: 200px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+        }
+        a, button,input[type=submit],input[type=reset] {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 15px;
+            background: #20B2AA;
+            color: white;
+            border: white 3px solid;
+            border-radius: 5px;
+            padding: 12px 20px;
+            margin-top: 10px;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover{
+            opacity:0.9;
+        }
+        </style>
+</head>
+<body>
+    <p align="center">RESPONSI PRAKTIKUM PBA</p>
+    <h1 align="center">TEXT PREPROCESSING</h1>
+    <form action="/preprocess" method="post">
+        <h3 align="center">Masukkan Text:</h3>
+        <p align="center">
+            <textarea id="text" name="text" rows="12" cols="100" placeholder="Masukkan Text disini"></textarea>
+        </p>
+        <p align="center">
+            <input type="checkbox" id="lowercase" name="lowercase" value="lowercase">
+            <label for="lowercase"> Lowercase</label>
+            <input type="checkbox" id="punct" name="punct" value="punct">
+            <label for="punct"> Remove Punctuation</label>
+            <input type="checkbox" id="stp" name="stp" value="stp">
+            <label for="stp"> Remove Stopwords</label><br><br>
+            <input type="radio" id="stem" name="stem" value="stem">
+            <label for="stem"> Stemming</label>
+            <input type="radio" id="lem" name="stem" value="lem">
+            <label for="lem"> Lemmatize</label>
+            <input type="radio" id="none" name="stem" value="none">
+            <label for="none"> None</label><br><br>
+            <input type="submit" value="Preprocessing">
+        </p>
+    </form>
+</body>
+</html>
